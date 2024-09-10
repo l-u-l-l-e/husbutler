@@ -13,11 +13,12 @@ body {
     font-weight: 300; /* Poppins Light */
     text-align: center;
     display: flex;
-    flex-direction: column; /* Stack elements vertically */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+    position: relative; /* For positioning child elements */
 }
 
 /* Container to center content vertically */
@@ -26,7 +27,7 @@ body {
     padding: 0 5%;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Center content vertically */
+    align-items: center;
 }
 
 /* Logo styling */
@@ -37,6 +38,7 @@ body {
 .logo {
     max-width: 200px; /* Limit maximum size for desktop */
     width: 80%; /* Ensure it scales properly */
+    margin-bottom: auto; /* Pushes it to the top */
 }
 
 /* Tagline styling */
@@ -56,9 +58,12 @@ body {
     justify-content: center;
     gap: 4vw; /* Increased space between contact items */
     flex-wrap: wrap; /* Ensure items wrap on smaller screens */
+    position: absolute; /* Positioning for mobile */
+    bottom: 0; /* Stick to the bottom of the viewport */
+    padding-bottom: 3vh; /* Add padding from the bottom */
+    width: 100%; /* Full width for centering */
 }
 
-/* Contact items */
 .contact-item {
     display: flex;
     align-items: center;
@@ -88,7 +93,7 @@ body {
     }
 
     .tagline {
-        font-size: 1.3em; /* Slightly smaller text for tablet */
+        font-size: 1.2em; /* Slightly smaller text for tablet */
         margin-bottom: 6vh;
         max-width: 90%; /* Ensure tagline is not too wide */
     }
@@ -110,45 +115,44 @@ body {
 
 @media (max-width: 480px) {
     body {
-        flex-direction: column; /* Stack elements vertically */
+        justify-content: flex-start; /* Make the body behave like a column */
+        align-items: stretch; /* Allow items to fill the width */
     }
 
     .container {
-        height: auto; /* Allow container to grow based on content */
-        padding: 0 5%; /* Maintain padding */
+        height: 100vh; /* Full viewport height */
+        justify-content: center; /* Center content in the middle */
+        padding-top: 5vh; /* Padding at the top for the logo */
     }
 
     .logo-container {
-        margin-top: 10vh; /* Move the logo further up */
-        margin-bottom: 2vh; /* Reduce space between logo and tagline */
-    }
-
-    .logo {
-        max-width: 120px; /* Limit maximum size for mobile */
+        margin-bottom: auto; /* Logo will stick to the top */
+        align-self: center; /* Keep the logo centered */
     }
 
     .tagline {
         font-size: 1em; /* Smaller text for mobile */
-        margin-bottom: 6vh; /* Increase space below tagline */
-        max-width: 95%; /* Ensure tagline is not too wide */
+        margin-bottom: auto;
+        max-width: 90%; /* Ensure tagline is not too wide */
     }
 
     .contact {
-        position: absolute;
-        bottom: 2vh; /* Move contact section further down */
-        gap: 2vw; /* Increased gap for mobile */
+        position: absolute; /* Stick the contact items to the bottom */
+        bottom: 0;
+        padding-bottom: 4vh; /* Add a little padding at the bottom */
+        gap: 5vh;
+        width: 100%; /* Ensure contact items are centered */
+        justify-content: center;
         font-size: 0.8em; /* Smaller font size for mobile */
-        width: 100%;
-        padding: 0 5%; /* Maintain padding */
     }
 
     .contact-item img {
         width: 18px; /* Smaller icons for mobile */
-        margin-right: 6px; /* Increased space for mobile */
+        margin-right: 6px; /* Space between icon and text */
     }
 
     .contact-item span {
-        font-size: 0.8em;
+        font-size: 0.8em; /* Slightly smaller text for mobile */
     }
 }
 

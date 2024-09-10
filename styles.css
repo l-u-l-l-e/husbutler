@@ -14,59 +14,50 @@ body {
     text-align: center;
     height: 100vh;
     margin: 0;
-    position: relative;
     display: flex;
     flex-direction: column;
+    justify-content: space-between; /* Space between logo, tagline, and contact */
 }
 
-/* Container to center content vertically */
+/* Container to center content vertically and keep the layout responsive */
 .container {
-    max-width: 90vw;
-    padding: 0 5%;
-    flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+    padding: 0 5%;
 }
 
 /* Logo fixed in a header */
 .logo-container {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    padding: 10px 0;
-    background-color: black; /* Keep the background black */
-    z-index: 1000; /* Ensure the logo stays on top */
+    flex-shrink: 0; /* Ensure the logo does not shrink */
 }
 
 .logo {
-    max-width: 150px; /* Fixed size for mobile */
-    margin: 0 auto; /* Centered logo */
+    max-width: 150px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 2vh; /* Space between logo and tagline */
 }
 
 /* Tagline centered in the middle */
 .tagline {
-    font-size: 1.1em; /* Small and readable font size */
-    margin-bottom: 8vh;
-    line-height: 1.4; /* Good readability */
-    max-width: 85%; /* Avoid taking the full width */
-    margin-left: auto;
-    margin-right: auto;
-    white-space: normal; /* Allow normal wrapping */
+    flex-grow: 1; /* Allows the tagline to grow and take available space */
+    font-size: 1.1em; /* Small but readable size */
+    margin-bottom: 4vh;
+    line-height: 1.4;
+    max-width: 85%;
     text-align: center;
 }
 
 /* Contact section at the bottom */
 .contact {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding-bottom: 4vh;
     display: flex;
     justify-content: center;
-    gap: 4vw; /* Space between contact items */
-    flex-wrap: wrap;
+    flex-shrink: 0; /* Ensure contact section does not shrink */
+    gap: 4vw;
+    margin-bottom: 4vh; /* Adds padding at the bottom */
 }
 
 .contact-item {
@@ -74,13 +65,12 @@ body {
     align-items: center;
     text-decoration: none;
     color: white;
-    font-size: 0.9em; /* Smaller font size for mobile */
+    font-size: 0.9em; /* Adjust the size for mobile */
 }
 
 .contact-item img {
-    width: 20px; /* Smaller icons */
-    height: auto;
-    margin-right: 8px; /* Space between icon and text */
+    width: 20px;
+    margin-right: 8px;
 }
 
 .contact-item span {
@@ -88,26 +78,13 @@ body {
 }
 
 /* Responsive adjustments for tablet and desktop */
-@media (max-width: 768px) {
-    .tagline {
-        font-size: 1.3em;
-        margin-bottom: 6vh;
-        max-width: 90%; /* Ensure tagline is not too wide */
-    }
-
-    .contact {
-        gap: 3vw;
-    }
-
-    .contact-item img {
-        width: 20px;
-    }
-}
-
 @media (min-width: 768px) {
-    .logo-container {
-        position: static; /* Normal flow for desktop */
-        padding: 0;
+    body {
+        justify-content: center; /* Center everything for tablet and desktop */
+    }
+
+    .container {
+        flex-grow: 1; /* Allow content to take more space on larger screens */
     }
 
     .logo {
@@ -116,11 +93,26 @@ body {
 
     .tagline {
         font-size: 1.4em;
-        margin-bottom: 9vh;
+        margin-bottom: 6vh;
     }
 
     .contact {
-        gap: 5vw;
+        gap: 3vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo {
+        max-width: 120px;
+    }
+
+    .tagline {
+        font-size: 1.2em;
+    }
+
+    .contact {
+        gap: 2vw;
+        margin-bottom: 2vh; /* Smaller bottom padding for mobile */
     }
 }
 
@@ -130,5 +122,5 @@ html {
 }
 
 body, .logo, .tagline, .contact-item span, .contact-item img {
-    transition: all 0.3s ease-in-out; /* Smooth transitions between sizes */
+    transition: all 0.3s ease-in-out;
 }

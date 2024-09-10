@@ -1,0 +1,162 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set up background, font styles, and text alignment */
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300; /* Poppins Light */
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container to center content vertically */
+.container {
+    max-width: 90vw;
+    padding: 0 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+}
+
+/* Logo styling */
+.logo-container {
+    margin-bottom: 8vh; /* Increased space between logo and tagline */
+}
+
+.logo {
+    max-width: 200px; /* Limit maximum size for desktop */
+    width: 80%; /* Ensure it scales properly */
+}
+
+/* Tagline styling */
+.tagline {
+    font-size: 1.1em; /* Adjust font size */
+    margin-bottom: 9vh; /* Increased space between tagline and contact */
+    line-height: 1.4; /* Adjust line height for better readability */
+    max-width: 75%; /* Ensure tagline is not too wide */
+    margin-left: auto;
+    margin-right: auto;
+    white-space: normal; /* Allow normal wrapping */
+}
+
+/* Contact section */
+.contact {
+    display: flex;
+    justify-content: center;
+    gap: 4vw; /* Increased space between contact items */
+    flex-wrap: wrap; /* Ensure items wrap on smaller screens */
+}
+
+/* Contact items */
+.contact-item {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: 0.9em; /* Smaller font size for contact items */
+}
+
+.contact-item img {
+    width: 24px; /* Fixed size for icons */
+    height: auto;
+    margin-right: 12px; /* Increased space between icon and text */
+}
+
+.contact-item span {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .logo {
+        max-width: 150px; /* Limit maximum size for tablet */
+    }
+
+    .logo-container {
+        margin-bottom: 6vh; /* Adjust space for tablet */
+    }
+
+    .tagline {
+        font-size: 1.3em; /* Slightly smaller text for tablet */
+        margin-bottom: 6vh;
+        max-width: 90%; /* Ensure tagline is not too wide */
+    }
+
+    .contact {
+        gap: 3vw; /* Increased gap for tablet */
+        font-size: 0.9em; /* Adjust font size for tablet */
+    }
+
+    .contact-item img {
+        width: 20px; /* Smaller icons for tablet */
+        margin-right: 8px; /* Increased space for tablet */
+    }
+
+    .contact-item span {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        flex-direction: column; /* Stack elements vertically */
+    }
+
+    .container {
+        height: auto; /* Allow container to grow based on content */
+        padding: 0 5%; /* Maintain padding */
+    }
+
+    .logo-container {
+        margin-top: 10vh; /* Move the logo further up */
+        margin-bottom: 2vh; /* Reduce space between logo and tagline */
+    }
+
+    .logo {
+        max-width: 120px; /* Limit maximum size for mobile */
+    }
+
+    .tagline {
+        font-size: 1em; /* Smaller text for mobile */
+        margin-bottom: 6vh; /* Increase space below tagline */
+        max-width: 95%; /* Ensure tagline is not too wide */
+    }
+
+    .contact {
+        position: absolute;
+        bottom: 2vh; /* Move contact section further down */
+        gap: 2vw; /* Increased gap for mobile */
+        font-size: 0.8em; /* Smaller font size for mobile */
+        width: 100%;
+        padding: 0 5%; /* Maintain padding */
+    }
+
+    .contact-item img {
+        width: 18px; /* Smaller icons for mobile */
+        margin-right: 6px; /* Increased space for mobile */
+    }
+
+    .contact-item span {
+        font-size: 0.8em;
+    }
+}
+
+/* Smooth transitions */
+html {
+    scroll-behavior: smooth;
+}
+
+body, .logo, .tagline, .contact-item span, .contact-item img {
+    transition: all 0.3s ease-in-out; /* Smoother transitions between sizes */
+}

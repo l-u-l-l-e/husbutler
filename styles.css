@@ -32,7 +32,7 @@ body {
 /* Tagline */
 .tagline {
     font-size: 1.1rem; /* Smaller tagline font */
-    margin-bottom: 20px; /* Reduced space below the tagline */
+    margin-bottom: 30px; /* Increased space below the tagline */
     color: #fff;
     line-height: 1.5;
 }
@@ -51,13 +51,13 @@ body {
     align-items: center;
     gap: 10px; /* Spacing between icon and text */
     text-decoration: none;
-    font-size: 1.2rem; /* Ensuring readability */
+    font-size: 0.9rem; /* Smaller font size for contact items */
     color: #fff;
 }
 
 .contact-item img {
-    width: 24px;  /* Icon size */
-    height: 24px; /* Icon size */
+    width: 20px;  /* Smaller icon size */
+    height: 20px; /* Smaller icon size */
 }
 
 /* Tablet Breakpoints */
@@ -68,11 +68,11 @@ body {
 
     .tagline {
         font-size: 1rem; /* Slightly smaller for tablets */
-        margin-bottom: 20px;
+        margin-bottom: 20px; /* Reduced space below the tagline */
     }
 
     .contact-item {
-        font-size: 1rem; /* Smaller contact text on tablets */
+        font-size: 0.9rem; /* Smaller contact text on tablets */
     }
 }
 
@@ -95,23 +95,23 @@ body {
 
     .tagline {
         font-size: 0.9rem; /* Smaller tagline font on mobile */
-        margin-bottom: 10px; /* Further reduced space below the tagline */
+        margin-bottom: 30px; /* Increased space below the tagline */
     }
 
     .contact {
         flex-direction: column; /* Stack contact items vertically */
-        gap: 15px; /* Reduced space between each contact item */
+        gap: 15px; /* Space between each contact item */
         align-items: center; /* Center items horizontally on mobile */
         width: 100%; /* Ensure contact section spans full width */
         margin-top: 10px; /* Ensure enough space between tagline and contact section */
     }
 
     .contact-item {
-        font-size: 1rem; /* Adjusted font size for mobile */
+        font-size: 0.8rem; /* Smaller font size for contact items on mobile */
     }
 
     .contact-item img {
-        width: 20px;
-        height: 20px;
+        width: 16px; /* Smaller icon size for mobile */
+        height: 16px; /* Smaller icon size for mobile */
     }
 }

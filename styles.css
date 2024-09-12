@@ -1,124 +1,103 @@
-/* General reset */
-* {
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-/* Set up background, font styles, and text alignment */
-body {
-    background-color: black;
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 300; /* Poppins Light */
-    text-align: center;
-    margin: 0;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Ensures that elements are spaced without excessive gaps */
-    height: 100vh; /* Makes sure the body height fits the viewport */
-    overflow: hidden; /* Prevents scrolling */
-}
-
-/* Container to center content vertically */
-.container {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 5%;
+    height: 100vh;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
 }
 
-/* Logo styling */
+.container {
+    text-align: center;
+    padding: 20px;
+    max-width: 800px;
+    width: 100%;
+}
+
 .logo-container {
-    flex-shrink: 0; /* Prevents shrinking of the logo */
-    margin-top: 4vh; /* Adds a small margin for the logo from the top */
+    margin-bottom: 60px; /* Increased space below the logo */
 }
 
 .logo {
-    max-width: 150px;
-    width: 100%;
+    max-width: 250px; /* Adjust the size based on the screenshot */
     height: auto;
 }
 
-/* Tagline styling */
 .tagline {
-    font-size: 1.1em; /* Keeps the font size comfortable for reading */
-    line-height: 1.4;
-    max-width: 85%;
-    margin-top: 4vh; /* Keeps some space between the logo and tagline */
-    margin-bottom: 4vh; /* Space between the tagline and contact */
-    text-align: center;
+    font-size: 1.1rem; /* Smaller tagline font */
+    margin-bottom: 80px; /* Increased space below the tagline */
+    color: #fff;
+    line-height: 1.5;
 }
 
-/* Contact section at the bottom */
+/* Contact section */
 .contact {
     display: flex;
     justify-content: center;
-    gap: 4vw;
-    flex-wrap: wrap; /* Allows wrapping on smaller screens */
-    margin-bottom: 3vh; /* Adds a small margin to the bottom for padding */
+    gap: 40px; /* Space between the contact items */
+    margin-top: 20px; /* Extra top margin to separate from the tagline */
 }
 
 .contact-item {
     display: flex;
     align-items: center;
+    gap: 10px; /* Spacing between icon and text */
     text-decoration: none;
-    color: white;
-    font-size: 0.9em; /* Slightly smaller font size for contact items */
+    font-size: 1.2rem; /* Ensuring readability */
+    color: #fff;
 }
 
 .contact-item img {
-    width: 20px;
-    margin-right: 8px;
+    width: 24px;  /* Icon size */
+    height: 24px; /* Icon size */
 }
 
-.contact-item span {
-    text-decoration: underline;
-}
-
-/* Responsive adjustments for tablet and desktop */
-@media (min-width: 768px) {
+/* Tablet Breakpoints */
+@media (max-width: 768px) {
     .logo-container {
-        margin-top: 5vh;
+        margin-bottom: 50px; /* Adjust spacing for smaller screens */
+    }
+
+    .tagline {
+        font-size: 1rem; /* Slightly smaller for tablets */
+        margin-bottom: 60px;
+    }
+
+    .contact-item {
+        font-size: 1rem; /* Smaller contact text on tablets */
+    }
+}
+
+/* Mobile Breakpoints */
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
     }
 
     .logo {
-        max-width: 200px;
+        max-width: 180px; /* Smaller logo for mobile */
     }
 
     .tagline {
-        font-size: 1.4em;
-        margin-top: 6vh;
-        margin-bottom: 6vh;
+        font-size: 0.9rem; /* Smaller tagline font on mobile */
+        margin-bottom: 40px;
     }
 
     .contact {
-        gap: 3vw;
-    }
-}
-
-@media (max-width: 480px) {
-    .logo-container {
-        margin-top: 2vh; /* Less space on smaller screens */
+        flex-direction: column; /* Stack contact items vertically */
+        gap: 20px; /* Space between each contact item */
     }
 
-    .tagline {
-        font-size: 1em; /* Smaller text for mobile */
-        margin-top: 3vh;
-        margin-bottom: 3vh;
-    }
-
-    .contact {
-        gap: 2vw;
-        margin-bottom: 2vh; /* Less bottom margin for tighter spacing */
+    .contact-item {
+        font-size: 1rem; /* Adjusted font size for mobile */
     }
 
     .contact-item img {
-        width: 18px; /* Slightly smaller icons */
-    }
-
-    .contact-item span {
-        font-size: 0.85em; /* Smaller text for contact items */
+        width: 20px;
+        height: 20px;
     }
 }

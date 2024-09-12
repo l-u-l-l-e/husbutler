@@ -95,19 +95,19 @@ body {
     }
 
     .logo-container {
-        margin-bottom: 20px; /* Adjust space below the logo */
+        margin-bottom: 40px; /* Adjust space below the logo */
     }
 
     .tagline {
         font-size: 0.9rem; /* Smaller tagline font on mobile */
-        margin-bottom: 20px; /* Adjust space below the tagline */
+        margin-bottom: 30px; /* Adjust space below the tagline */
     }
 
     .contact {
         flex-direction: row; /* Keep contact items in a row */
         justify-content: center; /* Center items horizontally */
         gap: 15px; /* Adjust space between contact items */
-        margin-top: 20px; /* Adjust space above the contact section */
+        margin-top: 30px; /* Adjust space above the contact section */
         width: 100%; /* Ensure contact section spans full width */
     }
 

@@ -9,13 +9,14 @@ body {
     height: 100vh;
     background-color: #000; /* Black background */
     color: #fff; /* White text */
+    overflow: hidden; /* Prevent scrolling */
 }
 
 .container {
     text-align: center;
     padding: 20px;
-    max-width: 800px;
-    width: 100%;
+    max-width: 100vw; /* Full width of viewport */
+    box-sizing: border-box; /* Include padding in width */
 }
 
 /* Logo Container */
@@ -79,7 +80,8 @@ body {
 @media (max-width: 480px) {
     .container {
         padding: 10px;
-        width: 100%; /* Ensure full width on mobile */
+        max-width: 100vw; /* Ensure full width of viewport */
+        overflow: hidden; /* Prevent scrolling */
     }
 
     .logo {
@@ -95,6 +97,7 @@ body {
         flex-direction: column; /* Stack contact items vertically */
         gap: 20px; /* Space between each contact item */
         align-items: center; /* Center items horizontally on mobile */
+        width: 100%; /* Ensure contact section spans full width */
     }
 
     .contact-item {

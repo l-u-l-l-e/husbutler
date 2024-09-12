@@ -21,7 +21,7 @@ body {
 
 /* Logo Container */
 .logo-container {
-    margin-bottom: 40px; /* Reduced space below the logo */
+    margin-bottom: 20px; /* Reduced space below the logo */
 }
 
 .logo {
@@ -32,7 +32,7 @@ body {
 /* Tagline */
 .tagline {
     font-size: 1.1rem; /* Smaller tagline font */
-    margin-bottom: 40px; /* Reduced space below the tagline */
+    margin-bottom: 20px; /* Reduced space below the tagline */
     color: #fff;
     line-height: 1.5;
 }
@@ -63,12 +63,12 @@ body {
 /* Tablet Breakpoints */
 @media (max-width: 768px) {
     .logo-container {
-        margin-bottom: 30px; /* Adjust spacing for smaller screens */
+        margin-bottom: 20px; /* Adjust spacing for smaller screens */
     }
 
     .tagline {
         font-size: 1rem; /* Slightly smaller for tablets */
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
 
     .contact-item {
@@ -82,15 +82,20 @@ body {
         padding: 10px;
         max-width: 100vw; /* Ensure full width of viewport */
         overflow: hidden; /* Prevent scrolling */
+        margin-top: 10px; /* Move container up */
     }
 
     .logo {
         max-width: 150px; /* Smaller logo for mobile */
     }
 
+    .logo-container {
+        margin-bottom: 10px; /* Further reduced space below the logo */
+    }
+
     .tagline {
         font-size: 0.9rem; /* Smaller tagline font on mobile */
-        margin-bottom: 20px; /* Reduced space below the tagline */
+        margin-bottom: 10px; /* Further reduced space below the tagline */
     }
 
     .contact {
@@ -98,7 +103,7 @@ body {
         gap: 15px; /* Reduced space between each contact item */
         align-items: center; /* Center items horizontally on mobile */
         width: 100%; /* Ensure contact section spans full width */
-        margin-top: 20px; /* Ensure enough space between tagline and contact section */
+        margin-top: 10px; /* Ensure enough space between tagline and contact section */
     }
 
     .contact-item {
